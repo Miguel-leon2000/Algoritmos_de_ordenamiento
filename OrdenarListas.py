@@ -1,6 +1,7 @@
 from random import *
 #--------------------------------ALGORITMO QUICKSORT - autor: Leonel Gonzales Vidales-----------------------------------
-class QuickSort:
+
+class QuickSort:    #Clase del algoritmo de ordenamiento Quicksort
     A = []
     B = []
     C = []
@@ -36,12 +37,22 @@ class QuickSort:
 
 #-----------------------------------------------------------------------------------------------------------------------
 
+
+    """
+    Metodo que genera los arreglos entre 
+    el rango de 0 a 100 para la lista A y de 0 a 60
+    para la lista B
+    """
     def generarAreglos(self):
         for i in range(0,100):
             self.A.append(randrange(1,100))
         for j in range(0,60):
             self.B.append(randrange(1,100))
 
+    """
+    Metodo que ordena cada una de las listas 
+    utilizando el algoritmo de ordenamiento Quicksort
+    """
     def OrdenarArreglos(self):
         ordenar = QuickSort()
         print('Arreglo A:......... ', self.A)
@@ -57,5 +68,5 @@ class QuickSort:
         print('Arreglo C ordenado: ', self.C)
 
 Ordenamiento = QuickSort()
-Ordenamiento.generarAreglos()
+Ordenamiento.generarAreglos()  #Se mandan llamar a los metodos para ejecutarlo
 Ordenamiento.OrdenarArreglos()
