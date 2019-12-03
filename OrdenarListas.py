@@ -41,3 +41,21 @@ class QuickSort:
             self.A.append(randrange(1,100))
         for j in range(0,60):
             self.B.append(randrange(1,100))
+
+    def OrdenarArreglos(self):
+        ordenar = QuickSort()
+        print('Arreglo A:......... ', self.A)
+        ordenar.ordenar(self.A)
+        print('Arreglo A ordenado: ', self.A)
+        print('Arreglo B:......... ', self.B)
+        ordenar.ordenar(self.B)
+        print('Arreglo B ordenado: ', self.B)
+        self.C = self.A
+        self.C.extend(self.B)
+        print('Arreglo C:......... ', self.C)
+        ordenar.ordenar(self.C)
+        print('Arreglo C ordenado: ', self.C)
+
+Ordenamiento = QuickSort()
+Ordenamiento.generarAreglos()
+Ordenamiento.OrdenarArreglos()
