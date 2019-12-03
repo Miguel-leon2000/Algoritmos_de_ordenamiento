@@ -29,3 +29,19 @@ class QuickSort:
         r = len(a) - 1
         q = int((p + r) / 2)
         return self.QuickSort(a, p, r)
+
+#-----------------------------------------------------------------------------------------------------------------------
+
+    def eliminarRepetidos(self,arreglo):
+        unicos = []
+        aux = list(arreglo)
+        for i in aux:
+            if i not in unicos:
+                unicos.append(i)
+        return unicos
+
+numeros = [4,7,11,4,9,5,11,7,3,5]
+Ordenamiento = QuickSort()
+print('Arreglo original:...................... ',numeros)
+print('Arreglo sin numeros repetidos:......... ',Ordenamiento.eliminarRepetidos(numeros))
+print('Arreglo sin numeros repetidos ordenado: ',Ordenamiento.ordenar(Ordenamiento.eliminarRepetidos(numeros)))
