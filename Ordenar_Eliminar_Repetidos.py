@@ -1,5 +1,5 @@
 #--------------------------------ALGORITMO QUICKSORT - autor: Leonel Gonzales Vidales-----------------------------------
-class QuickSort:
+class QuickSort:  #Clase del algoritmo de ordenamiento Quicksort
 
     def intercambia(self, a, x, y):
         tmp = a[x]
@@ -32,6 +32,10 @@ class QuickSort:
 
 #-----------------------------------------------------------------------------------------------------------------------
 
+    """
+    Metodo que permite eliminar los valores repetidos 
+    de la lista
+    """
     def eliminarRepetidos(self,arreglo):
         unicos = []
         aux = list(arreglo)
@@ -40,8 +44,8 @@ class QuickSort:
                 unicos.append(i)
         return unicos
 
-numeros = [4,7,11,4,9,5,11,7,3,5]
-Ordenamiento = QuickSort()
+numeros = [4,7,11,4,9,5,11,7,3,5]   #Se definen los valores
+Ordenamiento = QuickSort()    #Se manda llamar a la clase Quicksort
 print('Arreglo original:...................... ',numeros)
 print('Arreglo sin numeros repetidos:......... ',Ordenamiento.eliminarRepetidos(numeros))
 print('Arreglo sin numeros repetidos ordenado: ',Ordenamiento.ordenar(Ordenamiento.eliminarRepetidos(numeros)))
