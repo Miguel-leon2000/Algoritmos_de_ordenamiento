@@ -33,3 +33,11 @@ class QuickSort:
         r = len(a) - 1
         q = int((p + r) / 2)
         return self.QuickSort(a, p, r)
+
+#-----------------------------------------------------------------------------------------------------------------------
+
+    def generarAreglos(self):
+        for i in range(0,100):
+            self.A.append(randrange(1,100))
+        for j in range(0,60):
+            self.B.append(randrange(1,100))
